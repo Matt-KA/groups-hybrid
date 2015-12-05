@@ -7,14 +7,14 @@ import java.util.Random;
 
 import main.java.GroupsHybrid.AntColony.Interfaces.AntColony;
 import main.java.GroupsHybrid.Data.StudentScores;
-import main.java.GroupsHybrid.Data.StudentGroups;
+//import main.java.GroupsHybrid.;
 
 //Implementation similar to the one of James McCaffrey
 //(http://msdn.microsoft.com/de-de/magazine/hh781027.aspx)
 public class AntColonyArray implements AntColony {
 
 	private StudentScores scores = new StudentScores();
-	private StudentGroups groups = new StudentGroups();
+//	private StudentGroups groups = new StudentGroups();
 
 	@Override
 	public List<Integer> solve(int[] studentNodes, int iterations, int antCount,
@@ -53,7 +53,7 @@ public class AntColonyArray implements AntColony {
 				end = true;
 			}
 			printTrail(bestTrail);
-			printisValid(bestTrail);
+		//	printisValid(bestTrail);
 
 		}
 		System.out.println("\n-------------AntColonyArray------------------------");
@@ -182,7 +182,7 @@ public class AntColonyArray implements AntColony {
 		double sum = 0.0;
 
 		// calculate that probability that a student will be visited 
-		// based on a meausurement of both pheremone level and distance 
+		// based on a measurement of both pheromone level and distance 
 		// sum all these measurements 
 		for (int i = 0; i < numStudents; i++) {
 			if (!visited[i]) {
@@ -335,13 +335,13 @@ public class AntColonyArray implements AntColony {
 		System.out.println(sb);
 	}
 
-	private void printisValid(int[] bestTrail) {
+/*	private void printisValid(int[] bestTrail) {
 		if (false == groups.isValid(bestTrail)) {
 			System.out.println("NOT all groups are valid");
 		} else {
 			System.out.println("ALL groups are valid");
 
 		}
-	}
+	}*/
 
 }

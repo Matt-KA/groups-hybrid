@@ -92,9 +92,10 @@ public class StudentScores {
 		distances.add(this.getDistance(student2, student4));
 		distances.add(this.getDistance(student3, student4));
 
-		Collections.sort(distances);
+		//Collections.sort(distances);
+		return Collections.max(distances);
 
-		return distances.get(5);
+		//return distances.get(5);
 	}
 
 	/**
